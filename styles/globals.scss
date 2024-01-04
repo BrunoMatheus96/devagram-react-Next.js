@@ -1,0 +1,9 @@
+@import 'variaveis.scss';
+
+* {
+  font-family: 'Biennale Regular';
+  font-size: 14px;
+}
+
+/*Garante que a fonte sempre seja baixada no projeto*/
+@import '../public/fonts/fonts.scss'

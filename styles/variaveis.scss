@@ -1,0 +1,26 @@
+/*Definição de variável
+Estrutura para definição de variável: $fontRegular: 'Biennale Regular'
+ $fontRegular é o nome da variável
+: seria a tribuição, ou seja, o =
+'Valor da variável'*/
+$fontRegular: 'Biennale Regular';
+$fontBold: 'Biennale Bold';
+$fontLight: 'Biennale Light';
+
+
+/*Definindo as cores primárias do projeto
+Na definição das cores não é preciso as aspas*/
+$corPrimaria: #5E49FF;
+$corPrimaria3: #25cbd3;
+$corPrimaria4: #F0F5FF;
+
+$cinza: #F4F4F4;
+$cinza1: #DADADA;
+$cinza2: #7C7786;
+$cinza3: #4D4C4D;
+/*Cinza do título 'Devagraam' - quase preto*/
+$cinza4: #333333;
+$branco: #FFF;
+
+/*Linha de corte da versão moble para descktop*/
+$desktopBreakepoint: 992px;
