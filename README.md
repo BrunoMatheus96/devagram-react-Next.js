@@ -48,3 +48,4 @@ npm i axios
 ```bash
 npm i sass
 ```
+- Mixins tem finalidade de reutilização de código CSS em diferentes seletores

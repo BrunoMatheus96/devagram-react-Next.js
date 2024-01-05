@@ -4,6 +4,15 @@
   font-family: 'Biennale Regular';
   font-size: 14px;
 }
+.avatar{
+  border-radius: 50%;
+  object-fit: cover; //Responsável por ajustar a imagem dentro do espaço para não estourar, etc 
+}
+
+.oculto{
+  display: none; //Oculta o botão de upload de imagem
+}
 
 /*Garante que a fonte sempre seja baixada no projeto*/
-@import '../public/fonts/fonts.scss'
+@import '../public/fonts/fonts.scss';
+@import '../componentes/botao/botao.scss';
