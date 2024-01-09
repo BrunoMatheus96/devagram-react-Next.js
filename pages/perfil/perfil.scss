@@ -1,0 +1,133 @@
+.paginaPerfil{
+  .cabecalhoPerfil{
+    background-color: $branco;
+    
+    
+    .statusPerfil{
+      display: flex;
+      align-items: center;
+      padding: 16px 16px 24px;
+
+      .avatar{
+        width: 85px;
+        height: 85px;
+        margin-right: 24px; 
+        border: solid 3px transparent;
+        background-image: linear-gradient(to bottom, white, white), radial-gradient(circle at top center, $corPrimaria2, $corPrimaria3);   
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+                   
+      }
+      .informacoesPerfil{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .btn{
+          font-size: 12px;
+          margin-top: 12px;
+          padding: 5px;
+          border-radius: 4px;
+        }
+        .statusContainer{
+          display: flex;
+          justify-content: space-around;
+          .status{
+            text-align: center;
+
+            strong {
+              font-size: 14px;
+              font-family: $fontBold;
+              display: block;
+            }
+
+            span {
+              font-size: 12px;
+              display: block;
+            }
+
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $desktopBreakPoint) {
+    .cabecalhoPerfil{
+      .cabecalhoComAcoes{
+        > img {
+          display: none;
+        }
+      }
+      
+      .statusPerfil{
+        .avatar{
+          width: 90px;
+          height: 90px;
+        }
+        .informacoesPerfil{
+          .btn{
+            padding: 8px;
+          }
+        }
+      }
+      
+    }
+    
+  }
+}
+.paginaEditarPerfil{
+  background-color: $branco;
+  .conteudoPaginaEditarPerfil{
+    .edicaoAvatar{
+      margin: 16px 0;
+      text-align: center;
+      .avatar{
+        width: 90px;
+        height: 90px;
+        margin-bottom: 8px;
+
+      }
+  
+      span{
+        font-size: 12px;
+        color: $corPrimaria2;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .edicaoNome{
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+      padding: 0px 16px;
+      
+      label {
+        color: $cinza3;
+      }
+      input{
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 0 16px;
+        color: $cinza4;
+      }
+    }
+  }
+  @media screen and (min-width: $desktopBreakPoint) {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    .conteudoPaginaEditarPerfil{
+      flex: 1;
+      .edicaoAvatar{
+        .avatar{
+          width: 120px;
+          height: 120px;
+        }
+        span{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

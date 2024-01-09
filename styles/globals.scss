@@ -1,18 +1,125 @@
-@import 'variaveis.scss';
+@import "variaveis.scss";
+@import "../public/fonts/fonts.scss";
 
 * {
-  font-family: 'Biennale Regular';
+  font-family: $fontRegular;
   font-size: 14px;
 }
-.avatar{
+
+//Para o conteudo ocupar a tela toda 
+html,
+body,
+#__next {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.avatar {
   border-radius: 50%;
   object-fit: cover; //Responsável por ajustar a imagem dentro do espaço para não estourar, etc 
 }
 
-.oculto{
-  display: none; //Oculta o botão de upload de imagem
+.oculto {
+  display: none !important; //Oculta o botão de upload de imagem
+}
+
+input {
+  &::placeholder {
+    /* Funciona no Chrome, Opera, Safari, Firefox*/
+    color: $cinza2;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    /* ie 10-11 */
+    color: $cinza2;
+  }
+  &::-ms-input-placeholder {
+    /* Edge */
+    color: $cinza2;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.desktop {
+  @media screen and (min-width: $desktopBreakPoint) {
+    display: block;
+  }
+  @media screen and (max-width: calc($desktopBreakPoint - 1px)) {
+    display: none;
+  }
+}
+.mobile {
+  @media screen and (min-width: $desktopBreakPoint) {
+    display: none;
+  }
+  @media screen and (max-width: calc($desktopBreakPoint - 1px)) {
+    display: block;
+  }
+}
+
+.mensagemValidacao {
+  display: block;
+  color: $vermelho;
+  font-size: 90%;
+  margin-top: -15px;
+  margin-bottom: 5px;
+}
+
+.barraNavegacao {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 10px 0;
+    li {
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+}
+
+strong {
+  font-family: $fontBold;
+}
+
+body {
+  @media screen and (min-width: $desktopBreakPoint) {
+    background-color: $cinza5;
+    background-image: url("../public/imagens/textura.svg");
+  }
+}
+
+.largura30pctDesktop {
+  @media screen and (min-width: $desktopBreakPoint) {
+    width: 55%;
+    margin: auto;
+  }
+}
+
+.linhaDivisoria {
+  margin: 0;
+  border: none;
+  background-color: $cinza1;
+  height: 0.5px;
+  @media screen and (min-width: $desktopBreakPoint) {
+    margin: 0 auto;
+    width: 98%;
+  }
 }
 
 /*Garante que a fonte sempre seja baixada no projeto*/
-@import '../public/fonts/fonts.scss';
-@import '../componentes/botao/botao.scss';
+@import "../components/botao/botao.scss";
+@import "./paginaPublica.scss";
+@import "../components/inputPublico/inputPublico.scss";
+@import "../components/layout/cabecalho.scss";
+@import "../components/layout/rodape.scss";
+@import "../pages/cadastro/cadastro.scss";
+@import "../pages/perfil/perfil.scss";
+@import "../pages/publicacao/publicacao.scss";
+@import "../components/feed/feed.scss";
+@import "../components/cabecalhoComAcoes/cabecalhoComAcoes.scss";
+@import "../components/loading/loading.scss";

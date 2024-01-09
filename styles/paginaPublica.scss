@@ -1,0 +1,89 @@
+//Todos os estilos relacionados a página pública serão encapsulados aqui
+.paginaPublica {
+  //Estilos genéricos
+  display: flex; //Organiza os elementos na horizontal
+  flex-direction: column; //Posiciona os elementos na vertival e o 'row' vai posicionar na horizontal
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  background-color: $branco;
+
+  .logoContainer {
+    position: relative;
+    height: 13%;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .conteudoPaginaPublica {
+    width: 100%;
+  }
+
+  .btn {
+    margin-top: 15px;
+    padding: 10px;
+  }
+
+  .rodapePaginaPublica {
+    text-align: center;
+    margin-top: 24px;
+
+    p {
+      color: $cinza3;
+      margin: 0px 0px 2px;
+    }
+
+    a {
+      color: $corPrimaria2;
+      font-family: $fontBold;
+    }
+  }
+
+  @media screen and (min-width: $desktopBreakPoint) {
+    flex-direction: row;
+    padding: 0 140px;
+    font-size: 18px;
+
+    .logoContainer {
+      flex: 2; //Informa que o logo container deve ocupar o dobro do tamanho do formulário
+      height: 30%;
+
+      .logo {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+
+      }
+    }
+
+    .conteudoPaginaPublica {
+      flex: 1;
+      width: 30%;
+
+      border: 1px solid $corPrimaria2;
+      border-radius: 26px;
+      padding: 50px;
+    }
+
+    .btn {
+      padding: 18px;
+      font-size: 18px;
+    }
+
+    .rodapePaginaPublica {
+
+      p,
+      a {
+        font-size: 18px;
+      }
+    }
+
+    .inputPublico {
+      input {
+        font-size: 16px;
+      }
+
+    }
+  }
+}

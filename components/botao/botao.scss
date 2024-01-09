@@ -1,39 +1,38 @@
 //São istâncias de objetos que podemos chamar alguns métodos
 @mixin botaoPrimario {
-    background-color: $corPrimaria;
+    background-color: $corPrimaria2;
     color: $branco;
 }
 
 @mixin botaoInvertido {
     background-color: $branco;
-    color: $corPrimaria;
-    border: 1px solid $corPrimaria;
+    color: $corPrimaria2;
+    border: 1px solid $corPrimaria2;
 }
-
 .btn {
     width: 100%;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-
-    &.primaria {
+    
+    &.primaria{
         @include botaoPrimario;
 
-        &:hover {
-            @include botaoInvertido;
+        &:hover{
+           @include botaoInvertido;
         }
     }
 
-    &.invertido {
+    &.invertido{
         @include botaoInvertido;
 
-        &:hover {
+        &:hover{
             @include botaoPrimario;
         }
     }
 
     /*Deixa o botão meio opaco indicando que está desabilitado*/
-    &:disabled {
+    &:disabled{
         opacity: 0.5;
     }
 }
