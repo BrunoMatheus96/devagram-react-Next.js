@@ -1,0 +1,24 @@
+/*Usado para realizar exportação de fontes para o projeto*/
+@font-face {
+    /*Nome da fonte*/
+    font-family: 'BiennaleRegular';
+    /*Onde a fonte ta localizada*/
+    src: url('BiennaleRegular.otf') format('opentype');
+
+}
+
+@font-face {
+    /*Nome da fonte*/
+    font-family: 'BiennaleBold';
+    /*Onde a fonte ta localizada*/
+    src: url('BiennaleBold.otf') format('opentype');
+
+}
+
+@font-face {
+    /*Nome da fonte*/
+    font-family: 'BiennaleLight';
+    /*Onde a fonte ta localizada*/
+    src: url('BiennaleLight.otf') format('opentype');
+
+}
