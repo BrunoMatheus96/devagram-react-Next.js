@@ -9,6 +9,7 @@ export default function Index() {
 
   const [estaAutenticado, setEstaAutenticado] = useState(null);
 
+  //Hook utilizado para executar a ação quando o component for renderizado pela primeira vez
   useEffect(() => {
     setEstaAutenticado(
       usuarioService.estaAutenticado()

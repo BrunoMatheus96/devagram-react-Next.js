@@ -38,11 +38,12 @@ const mapaDeRotas = {
 const usuarioService = new UsuarioService();
 
 export default function Navegacao({ className }) {
-  const [rotaAtiva, setRotaAtiva] = useState('home');
+  const [rotaAtiva, setRotaAtiva] = useState('home'); //Define qual rota estará ativa. Por padrão será a "Home"
   const [notificacao, setNotificacao] = useState();
   const [iconeNotificacao, setIconeNotificacao] = useState(notificacaoCinza)
   const router = useRouter();
 
+  //Hoock utilizado sempre que fazemos a trota 
   useEffect(() => {
     definirRotaAtiva();
   }, [router.asPath])

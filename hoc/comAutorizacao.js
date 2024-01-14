@@ -12,7 +12,7 @@ export default function comAutorizacao(Component) {
     const router = useRouter();
     if(typeof window !== 'undefined'){
       if(!usuarioService.estaAutenticado()){
-        router.replace('/');
+        router.replace('/'); //Substitui a URL atual que eu estou
         return null;
       }
 
@@ -22,7 +22,7 @@ export default function comAutorizacao(Component) {
         <>
         <Cabecalho usuarioLogado={usuarioLogado}/>
         <Loading />
-        <Component usuarioLogado={usuarioLogado} {...props} />
+        <Component usuarioLogado={usuarioLogado} {...props} /> {/* ...props é utilizado para passar todos os atributos de um objeto para outro componente*/}
         <Rodape usuarioLogado={usuarioLogado} />
         </>
 
